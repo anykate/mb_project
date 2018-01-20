@@ -1,0 +1,15 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}
+    Index Page
+{% endblock %}
+
+{% block content %}
+    {% for comment in comments %}
+    <ul>
+        <li>
+            {{ comment }}
+        </li>
+    </ul>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}
+    Index Page
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+    <ul>
+        <li>
+            <a href="{% url 'posts:details' post.id %}"><h2>{{ post }}</h2></a>
+        </li>
+    </ul>
+    {% endfor %}
+{% endblock %}

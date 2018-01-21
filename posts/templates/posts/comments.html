@@ -1,0 +1,15 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}
+    Comments Page
+{% endblock %}
+
+{% block content %}
+    {% for comment in comments %}
+    <ul>
+        <li>
+            <h3>{{ comment }}</h3><br>
+        </li>
+    </ul>
+    {% endfor %}
+{% endblock %}
